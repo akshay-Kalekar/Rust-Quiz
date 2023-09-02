@@ -25,10 +25,10 @@ const index = () => {
               <label for="answer" className="block font-medium">Answer:</label>
                   <select id="answer" name="Answer" class="w-full text-black px-4 py-2 border rounded-lg shadow-sm focus:ring focus:ring-opacity-50" required>
                   <option value="" disabled selected>Select an answer</option>
-                  <option value="a">Option 1</option>
-                  <option value="b">Option 2</option>
-                  <option value="c">Option 3</option>
-                  <option value="d">Option 4</option>
+                  <option value="a">Option A</option>
+                  <option value="b">Option B</option>
+                  <option value="c">Option C</option>
+                  <option value="d">Option D</option>
                   </select>
               </div>
               <button type="submit" className="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg shadow-md">Submit</button>

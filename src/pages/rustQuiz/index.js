@@ -13,9 +13,9 @@ export const getStaticProps = async () => {
   });
   const data = await res.json();
   console.log("data ",data);
-  return {
-    props: { Recs: data },
-  };
+
+  return {  props: { Recs: data,fallback: true } ,  };
+
 };
 
 const index = ({ Recs }) => {
