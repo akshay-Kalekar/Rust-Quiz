@@ -223,16 +223,5 @@ export const RustQuizdata = {data : [
       "d": "A synchronization primitive for multithreading."
     },
     "Answer": "c"
-  },
-  {
-    "_id": "64ef7ff7ad79e12abc6dabe8",
-    "Question": 'In Rust, what is a "slice"?',
-    "Options": {
-      "a": "A type of loop used for iterating over collections.",
-      "b": "A keyword used for defining custom data structures.",
-      "c": "A reference to a contiguous sequence of elements in a collection.",
-      "d": "A synchronization primitive for multithreading."
-    },
-    "Answer": "c"
   }
 ]}
