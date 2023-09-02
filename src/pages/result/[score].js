@@ -13,7 +13,7 @@ const index = () => {
     <div className='text-6xl text-center m-2'> Score Card </div>
     <div className='p-4 rounded-lg flex gap-2 justify-between'>
     <div className='text-6xl'> Result </div>
-    <div className='text-4xl py-4 hover:bg-slate-700 bg-white text-black px-16 rounded-md '>{score}/40</div>
+    <div className='text-4xl py-4 hover:bg-slate-700 bg-white text-black px-16 rounded-md '>{score}/{total*2}</div>
     </div>
     <div className='grid  grid-cols-2 gap-10 text-center text-2xl'>
     <div className={`${statsStyle}`}><div>Correct </div><div>{correct}</div></div>

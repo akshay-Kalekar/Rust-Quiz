@@ -18,7 +18,7 @@ export const getStaticProps = async () => {
 
   return {  props: { Recs: data,fallback: true } ,  };
   } catch (error) {
-    console.log("why ",error);
+    console.log(error);
     return {  props: { Recs: RustQuizdata ,fallback: true } ,  };
   }
 };
