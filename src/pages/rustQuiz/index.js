@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { redirect } from "next/dist/server/api-utils";
 import { useRouter } from 'next/router'; 
-import { RustQuizdata } from "@/data/rustQuiz";
+import { RustQuizdata } from "@/data/RustQuiz";
 
 export const getStaticProps = async () => {
   try {
@@ -18,12 +18,12 @@ export const getStaticProps = async () => {
 
   return {  props: { Recs: data,fallback: true } ,  };
   } catch (error) {
-    console.log(error);
+    console.log("why ",error);
     return {  props: { Recs: RustQuizdata ,fallback: true } ,  };
   }
 };
 
-const index = ({ Recs = RustQuizdata }) => {
+const index = ({ Recs }) => {
   let { data } = Recs;
   const length = data.length;
   const router = useRouter();
