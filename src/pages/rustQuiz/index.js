@@ -2,9 +2,11 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { redirect } from "next/dist/server/api-utils";
 import { useRouter } from 'next/router'; 
+import { RustQuizdata } from "@/data/rustQuiz";
 
 export const getStaticProps = async () => {
-  const res = await fetch("http://localhost:3000/api/quiz_req", {
+  try {
+    const res = await fetch("http://localhost:3000/api/quiz_req", {
     method: "GET",
     headers: {
       Accept: "application/json, text/plain, */*",
@@ -15,10 +17,13 @@ export const getStaticProps = async () => {
   console.log("data ",data);
 
   return {  props: { Recs: data,fallback: true } ,  };
-
+  } catch (error) {
+    console.log(error);
+    return {  props: { Recs: RustQuizdata ,fallback: true } ,  };
+  }
 };
 
-const index = ({ Recs }) => {
+const index = ({ Recs = RustQuizdata }) => {
   let { data } = Recs;
   const length = data.length;
   const router = useRouter();
