@@ -34,7 +34,7 @@ const index = ({ Recs }) => {
   const [attempt, setAttempt] = useState(0);
   const [first, setfirst] = useState(data[i]);
 
-  const optStyle ="p-2  border-2 border-separate   text-xl py-4 hover:bg-[#DA555B] flex gap-2"
+  const optStyle ="p-2  border-2 border-separate   text-md sm:text-xl py-4 hover:bg-[#DA555B] flex gap-2"
   useEffect(() => {
     const timerId = setTimeout(() => incI(), 30000);
     const currentGreenElements =
@@ -124,13 +124,13 @@ const index = ({ Recs }) => {
   }
 
   return (
-    <div className="w-full p-8 h-[96vh]  border-red-800 border-solid flex flex-col ">
-    <div className=" float-right flex justify-end">
-    <div className=" bg-[#d44215d8] text-right text-2xl rounded-full border-2 w-fit p-4"> Time Left : {timer}</div>
+    <div className="w-full p-2 sm:p-8  max-h-screen  border-red-800 border-solid flex flex-col ">
+    <div className=" float-right flex sm:justify-end justify-center">
+    <div className=" bg-[#d44215d8] text-right text-lg sm:text-2xl rounded-full border-2 w-fit p-2 sm:p-4"> Time Left : {timer}</div>
     </div>
       {/*Quiz Part Start*/}
-      <div className="flex flex-col   p-24 ${inter.className} min-h-[80vh]   justify-between">
-        <div className="text-4xl">
+      <div className="flex flex-col gap-4 justify-between text-base pt-8 ${inter.className} justify-between">
+        <div className="font-bold text-xl sm:text-2xl md:text-4xl ">
           {i + 1} &#41; {data[i].Question}
         </div>
         <div
@@ -185,8 +185,9 @@ const index = ({ Recs }) => {
         </div>
         <div
           id="nextBtn"
-          className="text-xl w-1/3  p-4 bg-slate-700 hover:bg-slate-800 border-2 border-white cursor-pointer"
+          className={`text-xl w-1/3 p-4 bg-slate-700 hover:bg-slate-800 border-2 border-white cursor-pointer ${i === length-1 ? 'hidden' : ''}`}
           onClick={()=>{
+            console.log()
             if(i<length-1){
               incI()
             }
